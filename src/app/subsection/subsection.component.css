@@ -8,3 +8,13 @@ figure img {
     width: 60% !important;
     max-width: none !important;
   }
+
+.togglePlus {
+  background-color: transparent;
+  border-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 10%;
+    color: orange;
+    font-size: xx-large;
+}
