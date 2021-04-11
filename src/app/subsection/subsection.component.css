@@ -1,0 +1,10 @@
+figure img {
+    height: 265px;
+    width: 265px;
+    position: relative;
+    background: radial-gradient(51.17% 51.78% at 50% 51.17%, #73909C 0%, #204859 100%);
+  }
+  .modal-dialog {
+    width: 60% !important;
+    max-width: none !important;
+  }

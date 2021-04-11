@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Slider, Chart } from './model/section.model';
+import * as data from './parentData.json';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-section',
@@ -27,7 +29,9 @@ export class SectionComponent implements OnInit {
   public chart: any;
   public slider: any;
 
-  constructor() {}
+  selectedProductId : number = null;
+
+  products: any = (data as any).default;
 
   ngOnInit() {
     this.loanAmtMax = 1500000;
@@ -36,6 +40,32 @@ export class SectionComponent implements OnInit {
     this.reset();
     this.chart = this.setChartInitialValue();
     this.slider = this.setSliderInitialValue();
+  }
+
+  closeResult: string;
+  
+  constructor(private modalService: NgbModal) {}
+    
+  open(content,id) {
+    alert(id);
+    this.selectedProductId = id;
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.selectedProductId = null;
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.selectedProductId = null;
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
   /**
     * Method to get width for the pie chart.

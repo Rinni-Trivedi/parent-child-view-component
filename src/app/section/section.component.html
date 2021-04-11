@@ -1,4 +1,5 @@
-<section class="col-l-12 padding-30">
+<!-- <section class="col-l-12 padding-30">
+
 	<div class="col-l-10">
 		<div class="col-l-12 center head padding-bottom-20">
 			<h2>Instant Loan EMI Calculator</h2>
@@ -98,4 +99,44 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
+
+<div class="container">
+<div class="row">
+	<!-- <li *ngFor="let product of products">
+		
+	</li> -->
+	<div *ngFor="let product of products" class="col-md-4 col-lg-4 col-sm-6 col-xs-12 productBox">
+		<figure>
+			<img>
+			<button type="button" class="btn btn-primary showMoreButton" (click)="open(mymodal,product.id)" [id]="product.id">Show More</button>
+			<figcaption>{{product.pname}}</figcaption>
+		  </figure>
+	</div>
+	<!-- <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+		rinni
+	</div>
+	<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+		rinni
+	</div> -->
+</div>
+<div class="row">
+	<ng-template #mymodal let-modal>
+		<div class="modal-header">
+		  <!-- <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4> -->
+		  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<!-- <span>{{product.id}}</span> -->
+			<span aria-hidden="true">×</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <app-subsection [productId]="selectedProductId">
+
+		  </app-subsection>
+		</div>
+		<!-- <div class="modal-footer">
+		  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+		</div> -->
+	  </ng-template>
+</div>
+</div>

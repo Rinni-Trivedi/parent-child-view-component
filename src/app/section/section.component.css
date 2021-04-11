@@ -1,3 +1,25 @@
+figcaption {
+  text-align: center;
+  width: 265px;
+}
+figure img {
+  height: 265px;
+  width: 265px;
+  position: relative;
+  background: radial-gradient(51.17% 51.78% at 50% 51.17%, #73909C 0%, #204859 100%);
+}
+.modal-dialog {
+  width: 60% !important;
+  max-width: none !important;
+}
+.showMoreButton {
+  background-color: #77aee9;
+  border-color: #77aee9;
+  position: absolute;
+    bottom: 50%;
+    left: 25.5%;
+}
+
 .example-h2 {
   margin: 10px;
 }
