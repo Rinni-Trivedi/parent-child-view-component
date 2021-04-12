@@ -8,6 +8,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { SectionComponent } from './section/section.component';
 
+import { RatingModule } from 'ng-starrating';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
@@ -25,6 +27,7 @@ import { SubsectionComponent } from './subsection/subsection.component';
   imports: [
     BrowserModule,
     NgbModule,
+    RatingModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,

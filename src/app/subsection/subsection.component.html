@@ -1,19 +1,35 @@
-
+<head>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6">
             <figure>
-                <img>
-                <button type="button" class="btn btn-primary togglePlus">+</button>
+                <img style="height: 500px;width: 390px;">
+                <button (click)="toggleShow()" type="checkbox" class="togglePlus">+</button>
+
+<div *ngIf="isShown" class="row container-fluid"  id="divshow" >
+    <button type="button" class="btn btn-primary toggleChild1" style="box-shadow: none;"><img src = "./assets/fb.png" style="width: 10%;height: 10%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild2" style="box-shadow: none;"><img src = "./assets/twitter.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild3" style="box-shadow: none;"><img src="./assets/picsart.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild4" style="box-shadow: none;"><img src="./assets/youtube.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild5" style="box-shadow: none;"><img src="./assets/instagram.png" style="width: 14%;height: 14%;right: 50%;"></button>
+
+</div>
+                
             </figure>
             
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6">
                 <h3>{{detail.productName}}</h3>
                 <p>Item #: {{detail.itemNumber}}</p>
-               <span><h3>${{detail.olderPrice}}</h3></span><span><h3>${{detail.newPrice}}</h3></span>
-            
-            
+               <span><s><h3>${{detail.olderPrice}}</h3></s></span> &nbsp; <span class="newPrice"><h3>${{detail.newPrice}}</h3></span>
+               
+                <star-rating value="{{detail.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
+              
+                <p>{{detail.productData}}</p>
+                <p>Size : <span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
+                <button class="pillbutton">Add To Cart</button>
         </div>
     </div>
 </div>

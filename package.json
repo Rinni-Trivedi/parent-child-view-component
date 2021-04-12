@@ -25,6 +25,7 @@
     "bootstrap": "^4.6.0",
     "hammerjs": "^2.0.8",
     "jqwidgets-ng": "^8.1.4",
+    "ng-starrating": "^1.0.20",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

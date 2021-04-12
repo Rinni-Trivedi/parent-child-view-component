@@ -47,7 +47,6 @@ export class SectionComponent implements OnInit {
   constructor(private modalService: NgbModal) {}
     
   open(content,id) {
-    alert(id);
     this.selectedProductId = id;
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.selectedProductId = null;
