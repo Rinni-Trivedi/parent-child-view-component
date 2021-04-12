@@ -142,6 +142,17 @@ section {
     padding: 30px;
   }
 }
+@media (max-width: 480px)  {
+  .productBox {
+    text-align: center !important;
+  }
+  .showMoreButton {
+    left: 33.5%;
+  }
+  figcaption {
+    width: auto;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   section {

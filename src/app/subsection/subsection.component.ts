@@ -15,12 +15,7 @@ export class SubsectionComponent implements OnChanges {
   details: any = (data as any).default;
   detail: any = null;
 
-  onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
-    alert(`Old Value:${$event.oldValue}, 
-      New Value: ${$event.newValue}, 
-      Checked Color: ${$event.starRating.checkedcolor}, 
-      Unchecked Color: ${$event.starRating.uncheckedcolor}`);
-  }
+  
 
   @Input()
   productId

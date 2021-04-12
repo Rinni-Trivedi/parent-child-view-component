@@ -101,12 +101,12 @@
 	</div>
 </section> -->
 
-<div class="container">
+<div class="container" style="padding: 4%;">
 <div class="row">
 	<!-- <li *ngFor="let product of products">
 		
 	</li> -->
-	<div *ngFor="let product of products" class="col-md-4 col-lg-4 col-sm-6 col-xs-12 productBox">
+	<div *ngFor="let product of products" class="col-md-6 col-lg-4 col-sm-6 col-xs-12 productBox">
 		<figure>
 			<img>
 			<button type="button" class="btn btn-primary showMoreButton" (click)="open(mymodal,product.id)" [id]="product.id">Show More</button>

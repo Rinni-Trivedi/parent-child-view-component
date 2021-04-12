@@ -64,6 +64,82 @@ figure img {
     top: 40%;
     left: 10%;
 }
+@media (min-width:768px) {
+  .laptopView {
+    display: none;
+  }
+  .tabletView {
+    display: block;
+  }
+  .modal-dialog {
+    width: 60%;
+  }
+  .mobileView {
+    display: none;
+  }
+  figure img {
+    height: 265px;
+    width: 500px;
+  }
+}
+
+/* @media (max-width:1025px) {
+  .laptopView {
+    display: none;
+  }
+  .tabletView {
+    display: block;
+  }
+  .mobileView {
+    display: none;
+  }
+  figure img {
+    height: 350px;
+  }
+} */
+@media (min-width:1030px) {
+  .laptopView {
+    display: block;
+  }
+  .modal-dialog {
+    width: 60%;
+  }
+  .tabletView {
+    display: none;
+  }
+  .mobileView {
+    display: none;
+  }
+  figure img {
+    height: 500px;
+    width:500px;
+  }
+}
+@media (max-width: 480px) {
+  .laptopView {
+    display: none;
+  }
+  .tabletView {
+    display: none;
+  }
+  .mobileView {
+    display: block;
+  }
+  .modal-dialog {
+    width: 95%;
+}
+
+.mobileView span {
+  display: inline;
+
+}
+.appIcons {
+  text-align: center;
+}
+
+}
+
+
 .btn-primary:not(:disabled):not(.disabled):active:focus {
   box-shadow: none !important;
 }

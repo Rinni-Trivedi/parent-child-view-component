@@ -2,10 +2,21 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <div class="container">
+    <div class="row mobileView">
+    <h3>{{detail.productName}}</h3>
+        <div class="row">
+            <div class="col-6">
+                <p>Item #: {{detail.itemNumber}}</p>
+            </div>
+            <div class="col-6">
+                <star-rating value="{{detail.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
+            </div>
+        </div>
+        </div>
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6 laptopView tabletView">
             <figure>
-                <img style="height: 500px;width: 390px;">
+                <img style="width: 100%;">
                 <button (click)="toggleShow()" type="checkbox" class="togglePlus">+</button>
 
 <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
@@ -20,7 +31,25 @@
             </figure>
             
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="laptopView">
+            <div class="row">
+            <div class="col-lg-6">
+            <figure>
+                <img style="width: 100%;">
+                <button (click)="toggleShow()" type="checkbox" class="togglePlus">+</button>
+
+<div *ngIf="isShown" class="row container-fluid"  id="divshow" >
+    <button type="button" class="btn btn-primary toggleChild1" style="box-shadow: none;"><img src = "./assets/fb.png" style="width: 10%;height: 10%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild2" style="box-shadow: none;"><img src = "./assets/twitter.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild3" style="box-shadow: none;"><img src="./assets/picsart.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild4" style="box-shadow: none;"><img src="./assets/youtube.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild5" style="box-shadow: none;"><img src="./assets/instagram.png" style="width: 14%;height: 14%;right: 50%;"></button>
+
+</div>
+                
+            </figure>
+            </div>
+            <div class="col-lg-6">
                 <h3>{{detail.productName}}</h3>
                 <p>Item #: {{detail.itemNumber}}</p>
                <span><s><h3>${{detail.olderPrice}}</h3></s></span> &nbsp; <span class="newPrice"><h3>${{detail.newPrice}}</h3></span>
@@ -31,5 +60,38 @@
                 <p>Size : <span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
                 <button class="pillbutton">Add To Cart</button>
         </div>
+        </div>
+        </div>
+        <div class="col-md-6 tabletView">
+
+            <h3>{{detail.productName}}</h3>
+            <p>Item #: {{detail.itemNumber}}</p>
+            <star-rating value="{{detail.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
+           <span><s><h3>${{detail.olderPrice}}</h3></s></span> &nbsp; <span class="newPrice"><h3>${{detail.newPrice}}</h3></span>
+           <p>Size :<span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
+            <button class="pillbutton">Add To Cart</button>
+            
+            
+    </div>
+    <div class="col-md-6 mobileView">
+        <figure style="text-align: center;">
+            <img style="width: 100%;">
+            </figure>
+        
+            <p style="text-align: center;">{{detail.productData}}</p>
+            <div class="appIcons">
+                <span><img src = "./assets/fb.png" style="width: 10%;height: 5%;"></span>&nbsp; <span> <img src = "./assets/twitter.png" style="width: 10%;height: 5%;"></span>&nbsp; <span> <img src="./assets/picsart.png" style="width: 10%;height: 5%;"> </span>&nbsp; <span><img src="./assets/youtube.png" style="width: 10%;height: 5%;"></span>&nbsp; <span><img src="./assets/instagram.png" style="width: 10%;height: 5%;"></span>
+            </div>
+        
+        <span><s><h3 style="text-align: center;">${{detail.olderPrice}}</h3></s></span> <span class="newPrice"><h3 style="text-align: center;">${{detail.newPrice}}</h3></span>
+       <p style="text-align: center;">Select a Size : </p>
+       <p style="text-align: center;"><span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
+        <button style="text-align: center; margin: 1% 22%;"class="pillbutton">Add To Cart</button>
+        
+        
+</div>
+    <div class="col-md-12 tabletView">
+        <p>{{detail.productData}}</p>
+    </div>
     </div>
 </div>
