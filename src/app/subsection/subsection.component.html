@@ -6,7 +6,7 @@
     <h3>{{detail.productName}}</h3>
         <div class="row">
             <div class="col-6">
-                <p>Item #: {{detail.itemNumber}}</p>
+                <p style="margin-top: 5%;">Item #: {{detail.itemNumber}}</p>
             </div>
             <div class="col-6">
                 <star-rating value="{{detail.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
@@ -17,7 +17,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6 laptopView tabletView">
             <figure>
                 <img style="width: 100%;">
-                <button (click)="toggleShow()" type="checkbox" class="togglePlus">+</button>
+                <button (click)="toggleShow()" type="checkbox" class="togglePlus"><img id = "myIcon" [src]="iconImageSrc" style="width: 10%;height: 10%;right: 47%;"></button>
 
 <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
     <button type="button" class="btn btn-primary toggleChild1" style="box-shadow: none;"><img src = "./assets/fb.png" style="width: 10%;height: 10%;right: 50%;"></button>
@@ -36,7 +36,7 @@
             <div class="col-lg-6">
             <figure>
                 <img style="width: 100%;">
-                <button (click)="toggleShow()" type="checkbox" class="togglePlus">+</button>
+                <button (click)="toggleShow()" type="checkbox" class="togglePlus"><img id = "myIcon" [src]="iconImageSrc" style="width: 10%;height: 10%;right: 47%;"></button>
 
 <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
     <button type="button" class="btn btn-primary toggleChild1" style="box-shadow: none;"><img src = "./assets/fb.png" style="width: 10%;height: 10%;right: 50%;"></button>
@@ -57,8 +57,8 @@
                 <star-rating value="{{detail.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
               
                 <p>{{detail.productData}}</p>
-                <p>Size : <span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
-                <button class="pillbutton">Add To Cart</button>
+                <p>Size : <span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5" style="background-color: #7B8093;color: white;">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
+                <button class="pillbutton">ADD TO CART</button>
         </div>
         </div>
         </div>
@@ -68,7 +68,8 @@
             <p>Item #: {{detail.itemNumber}}</p>
             <star-rating value="{{detail.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
            <span><s><h3>${{detail.olderPrice}}</h3></s></span> &nbsp; <span class="newPrice"><h3>${{detail.newPrice}}</h3></span>
-           <p>Size :<span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
+           <h5>SELECT A SIZE:</h5>
+               <p><span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5" style="background-color:#7B8093;color:white">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
             <button class="pillbutton">Add To Cart</button>
             
             
@@ -78,20 +79,23 @@
             <img style="width: 100%;">
             </figure>
         
-            <p style="text-align: center;">{{detail.productData}}</p>
+            <p class="productDetail" style="text-align: center;">{{detail.productData}}</p>
             <div class="appIcons">
                 <span><img src = "./assets/fb.png" style="width: 10%;height: 5%;"></span>&nbsp; <span> <img src = "./assets/twitter.png" style="width: 10%;height: 5%;"></span>&nbsp; <span> <img src="./assets/picsart.png" style="width: 10%;height: 5%;"> </span>&nbsp; <span><img src="./assets/youtube.png" style="width: 10%;height: 5%;"></span>&nbsp; <span><img src="./assets/instagram.png" style="width: 10%;height: 5%;"></span>
             </div>
+        <div class="prices">
+            <span><s>${{detail.olderPrice}}</s></span> &nbsp; <span class="newPrice">${{detail.newPrice}}</span>
+        </div>
         
-        <span><s><h3 style="text-align: center;">${{detail.olderPrice}}</h3></s></span> <span class="newPrice"><h3 style="text-align: center;">${{detail.newPrice}}</h3></span>
        <p style="text-align: center;">Select a Size : </p>
-       <p style="text-align: center;"><span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
-        <button style="text-align: center; margin: 1% 22%;"class="pillbutton">Add To Cart</button>
+       <p style="text-align: center;"><span><button class="button button5">XL</button></span> &nbsp; <span><button class="button button5">L</button></span> &nbsp;<span><button class="button button5" style="background-color: #7B8093; color: white;">M</button></span>&nbsp; <span><button class="button button5">S</button></span></p>
+        <button style="text-align: center; "class="pillbutton">Add To Cart</button>
         
         
 </div>
     <div class="col-md-12 tabletView">
-        <p>{{detail.productData}}</p>
+        <h5>DETAILS</h5>
+        <p class="productDetail">{{detail.productData}}</p>
     </div>
     </div>
 </div>

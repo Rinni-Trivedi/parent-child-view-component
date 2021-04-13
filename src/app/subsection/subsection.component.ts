@@ -14,8 +14,8 @@ export class SubsectionComponent implements OnChanges {
   showMenu : boolean = false;
   details: any = (data as any).default;
   detail: any = null;
-
-  
+  iconImageSrc = './assets/plus.png';
+  isIcon = true;
 
   @Input()
   productId
@@ -28,11 +28,20 @@ export class SubsectionComponent implements OnChanges {
   isShown: boolean = false ; // hidden by default
 
 
-  toggleShow() {
-  
-  this.isShown = ! this.isShown;
-  
-  }
+  // toggleShow(imageNameObject: { src: string; }) {
+  // this.isShown = ! this.isShown;
+  // this.iconImageSrc = imageNameObject.src;
+  // }
+  toggleShow(imageNameObject: { src: string; }) {
+    this.isShown = ! this.isShown;
+    this.isIcon =! this.isIcon;
+    if(this.isIcon){
+      this.iconImageSrc = './assets/plus.png'
+    }
+    else {
+      this.iconImageSrc = './assets/close.png'
+    }
+    }
 
   showMenuToggle(){
     this.showMenu = true;

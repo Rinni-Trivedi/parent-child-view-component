@@ -12,13 +12,37 @@ figure img {
   width: 60% !important;
   max-width: none !important;
 }
-.showMoreButton {
+figure .showMoreButton {
+ visibility: hidden;
   background-color: #77aee9;
   border-color: #77aee9;
   position: absolute;
     bottom: 50%;
     left: 25.5%;
 }
+figure:hover .showMoreButton {
+  visibility: visible;
+}
+@media (min-width:1030px) {
+  .laptopView {
+    display: block;
+  }
+  .modal-header {
+    padding: 0;
+  }
+  
+}
+@media (max-width: 480px) {
+  figure .showMoreButton {
+    left: 35.5%;
+  }
+}
+
+@media (max-width: 480px) {
+
+}
+
+
 
 .example-h2 {
   margin: 10px;

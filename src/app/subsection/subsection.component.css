@@ -8,7 +8,9 @@ figure img {
     width: 60% !important;
     max-width: none !important;
   }
-
+.productDetail {
+  color: #7B8093;
+}
 .togglePlus {
   background-color: transparent;
   border-color: transparent;
@@ -64,6 +66,22 @@ figure img {
     top: 40%;
     left: 10%;
 }
+.prices {
+  font-weight: 500;
+  margin: 5% 0;
+  text-align: center;
+}
+.close {
+  outline: none;
+}
+.mobileView .pillbutton {
+  margin: 1% 25%;
+}
+@media (min-width:414px) {
+  .mobileView .pillbutton {
+    margin: 1% 30%;
+  }
+}
 @media (min-width:768px) {
   .laptopView {
     display: none;
@@ -78,8 +96,11 @@ figure img {
     display: none;
   }
   figure img {
-    height: 265px;
+    height: 350px;
     width: 500px;
+  }
+  .togglePlus {
+    left: 12%;
   }
 }
 
@@ -111,7 +132,7 @@ figure img {
     display: none;
   }
   figure img {
-    height: 500px;
+    height: 550px;
     width:500px;
   }
 }
@@ -160,6 +181,9 @@ figure img {
 .button5 {
   border-radius: 50%;
   padding: 8px;
+  background-color: white;
+  border-color: #7B8093;
+    color: #7B8093;
 }
 .pillbutton {
   background-color: orange;
