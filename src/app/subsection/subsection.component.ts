@@ -16,6 +16,7 @@ export class SubsectionComponent implements OnChanges {
   detail: any = null;
   iconImageSrc = './assets/plus.png';
   isIcon = true;
+  closeResult: string;
 
   @Input()
   productId

@@ -185,6 +185,24 @@ figure img {
   border-color: #7B8093;
     color: #7B8093;
 }
+.button5:hover {
+  background-color: #7B8093;
+  border-color: #7B8093;
+    color: white;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+  background-color: #7B8093;
+  border-color: #7B8093;
+    color: white;
+}
+.btn-outline-primary:focus, .btn:focus {
+  box-shadow: none;
+}
+.button5:focus {
+  background-color: #7B8093;
+  border-color: #7B8093;
+    color: white;
+}
 .pillbutton {
   background-color: orange;
   border: none;
