@@ -57,7 +57,9 @@
                 <star-rating value="{{detail.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
               
                 <p>{{detail.productData}}</p>
-                <p>Size : <span><button type="button" class="btn btn-outline-primary button5">XL</button></span> &nbsp; <span><button type="button" class="btn btn-outline-primary button5">L</button></span> &nbsp;<span><button type="button" class="btn btn-outline-primary button5">M</button></span>&nbsp; <span><button type="button" class="btn btn-outline-primary button5">S</button></span></p>
+                <!-- <p> Your ans is: {{productSize}}</p> -->
+                <!-- <p>Size : <span><button type="button" class="btn btn-outline-primary button5" (click) = "saveInputValue(XL)">XL <input type="radio" checked [(ngModel)]="productSize" value="XL" name="productSize"/></button></span> &nbsp; <span><button type="button" class="btn btn-outline-primary button5">L <input type="radio" [(ngModel)]="productSize" value="L" name="productSize"/></button></span> &nbsp;<span><button type="button" class="btn btn-outline-primary button5">M <input type="radio" [(ngModel)]="productSize" value="M" name="productSize"/></button></span>&nbsp; <span><button type="button" class="btn btn-outline-primary button5">S <input type="radio" [(ngModel)]="productSize" value="S" name="productSize"/></button></span></p> -->
+                <p>Size : <span><button type="button" class="btn btn-outline-primary button5" (click) = "saveInputValue(XL)">XL </button></span> &nbsp; <span><button type="button" class="btn btn-outline-primary button5">L </button></span> &nbsp;<span><button type="button" class="btn btn-outline-primary button5">M </button></span>&nbsp; <span><button type="button" class="btn btn-outline-primary button5">S</button></span></p>
                 <button class="pillbutton">ADD TO CART</button>
         </div>
         </div>

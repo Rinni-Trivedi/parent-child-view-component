@@ -28,11 +28,19 @@ export class SectionComponent implements OnInit {
 
   public chart: any;
   public slider: any;
+  public productSize:any;
+
+  saveInputValue(){
+    let selectedSize = this.productSize;
+    alert(selectedSize);
+  }
 
   selectedProductId : number = null;
 
   products: any = (data as any).default;
+  //productSizeSetlled = ;
 
+  
   ngOnInit() {
     this.loanAmtMax = 1500000;
     this.intRateMax = 100;

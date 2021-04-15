@@ -19,7 +19,8 @@ export class SubsectionComponent implements OnChanges {
   closeResult: string;
 
   @Input()
-  productId
+  productId;
+  productSize
 
   ngOnChanges(changes: SimpleChanges): void {
     let id = changes['productId'].currentValue;
@@ -27,6 +28,10 @@ export class SubsectionComponent implements OnChanges {
 
   }
   isShown: boolean = false ; // hidden by default
+  saveInputValue(){
+    let selectedSize = this.productSize;
+    // alert(selectedSize);
+  }
 
 
   // toggleShow(imageNameObject: { src: string; }) {
