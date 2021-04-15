@@ -14,7 +14,7 @@ export class SubsectionComponent implements OnChanges {
   showMenu : boolean = false;
   details: any = (data as any).default;
   detail: any = null;
-  iconImageSrc = './assets/plus.png';
+  iconImageSrc = './assets/Open.png';
   isIcon = true;
   closeResult: string;
 
@@ -42,10 +42,10 @@ export class SubsectionComponent implements OnChanges {
     this.isShown = ! this.isShown;
     this.isIcon =! this.isIcon;
     if(this.isIcon){
-      this.iconImageSrc = './assets/plus.png'
+      this.iconImageSrc = './assets/Open.png'
     }
     else {
-      this.iconImageSrc = './assets/close.png'
+      this.iconImageSrc = './assets/Close1.png'
     }
     }
 

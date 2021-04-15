@@ -14,17 +14,17 @@
         </div>
         </div>
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 laptopView tabletView">
+        <div class="col-lg-6 col-md-6 col-sm-6 tabletView">
             <figure>
                 <img style="width: 100%;">
-                <button (click)="toggleShow()" type="checkbox" class="togglePlus"><img id = "myIcon" [src]="iconImageSrc" style="width: 10%;height: 10%;right: 47%;"></button>
+                <button (click)="toggleShow()" type="checkbox" class="togglePlus"><img id = "myIcon" [src]="iconImageSrc" style="height: 100%; width:100%;"></button>
 
 <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
-    <button type="button" class="btn btn-primary toggleChild1" style="box-shadow: none;"><img src = "./assets/fb.png" style="width: 10%;height: 10%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild2" style="box-shadow: none;"><img src = "./assets/twitter.png" style="width: 14%;height: 14%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild3" style="box-shadow: none;"><img src="./assets/picsart.png" style="width: 14%;height: 14%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild4" style="box-shadow: none;"><img src="./assets/youtube.png" style="width: 14%;height: 14%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild5" style="box-shadow: none;"><img src="./assets/instagram.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild1" style="box-shadow: none; top: 9%;"><img src = "./assets/Facebookfb.png" style="right: 45%;"></button>
+    <button type="button" class="btn btn-primary toggleChild2" style="box-shadow: none; top: 22%;"><img src = "./assets/Twittertwiiter.png" style="right: 45%;"></button>
+    <button type="button" class="btn btn-primary toggleChild3" style="box-shadow: none;top: 35%;"><img src="./assets/Pinterest.png" style="right: 45%;"></button>
+    <button type="button" class="btn btn-primary toggleChild4" style="box-shadow: none;top: 48%;"><img src="./assets/Youtube.png" style="right: 45%;"></button>
+    <button type="button" class="btn btn-primary toggleChild5" style="box-shadow: none;top: 62%;"><img src="./assets/Instagram.png" style="right: 45%;"></button>
 
 </div>
                 
@@ -36,14 +36,14 @@
             <div class="col-lg-6">
             <figure>
                 <img style="width: 100%;">
-                <button (click)="toggleShow()" type="checkbox" class="togglePlus"><img id = "myIcon" [src]="iconImageSrc" style="width: 10%;height: 10%;right: 47%;"></button>
+                <button (click)="toggleShow()" type="checkbox" class="togglePlus"><img id = "myIcon" [src]="iconImageSrc" style="width: 100%;height: 100%;right: 47%;"></button>
 
 <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
-    <button type="button" class="btn btn-primary toggleChild1" style="box-shadow: none;"><img src = "./assets/fb.png" style="width: 10%;height: 10%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild2" style="box-shadow: none;"><img src = "./assets/twitter.png" style="width: 14%;height: 14%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild3" style="box-shadow: none;"><img src="./assets/picsart.png" style="width: 14%;height: 14%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild4" style="box-shadow: none;"><img src="./assets/youtube.png" style="width: 14%;height: 14%;right: 50%;"></button>
-    <button type="button" class="btn btn-primary toggleChild5" style="box-shadow: none;"><img src="./assets/instagram.png" style="width: 14%;height: 14%;right: 50%;"></button>
+    <button type="button" class="btn btn-primary toggleChild1" ><img src = "./assets/Facebookfb.png"></button>
+    <button type="button" class="btn btn-primary toggleChild2"><img src = "./assets/Twittertwiiter.png"></button>
+    <button type="button" class="btn btn-primary toggleChild3"><img src="./assets/Pinterest.png"></button>
+    <button type="button" class="btn btn-primary toggleChild4"><img src="./assets/Youtube.png"></button>
+    <button type="button" class="btn btn-primary toggleChild5"><img src="./assets/Instagram.png"></button>
 
 </div>
                 
@@ -83,7 +83,7 @@
         
             <p class="productDetail" style="text-align: center;">{{detail.productData}}</p>
             <div class="appIcons">
-                <span><img src = "./assets/fb.png" style="width: 10%;height: 5%;"></span>&nbsp; <span> <img src = "./assets/twitter.png" style="width: 10%;height: 5%;"></span>&nbsp; <span> <img src="./assets/picsart.png" style="width: 10%;height: 5%;"> </span>&nbsp; <span><img src="./assets/youtube.png" style="width: 10%;height: 5%;"></span>&nbsp; <span><img src="./assets/instagram.png" style="width: 10%;height: 5%;"></span>
+                <span><img src = "./assets/Facebookfb.png"></span>&nbsp; <span> <img src = "./assets/Twittertwiiter.png"></span>&nbsp; <span> <img src="./assets/Pinterest.png"> </span>&nbsp; <span><img src="./assets/Youtube.png"></span>&nbsp; <span><img src="./assets/Instagram.png"></span>
             </div>
         <div class="prices">
             <span><s>${{detail.olderPrice}}</s></span> &nbsp; <span class="newPrice">${{detail.newPrice}}</span>

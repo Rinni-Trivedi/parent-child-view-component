@@ -22,6 +22,7 @@ figure img {
     outline: none;
 }
 .toggleChild1 {
+
   background-color: transparent;
   border-color: transparent;
   position: absolute;
@@ -29,6 +30,11 @@ figure img {
     font-size: xx-large;
     top: 8%;
     left: 10%;
+}
+.toggleChild1 img, .toggleChild2 img, .toggleChild3 img, .toggleChild4 img, .toggleChild5 img {
+  right: 50%;
+  height: 100% ;
+  width: 100%;
 }
 .toggleChild2 {
   background-color: transparent;
@@ -76,6 +82,10 @@ figure img {
 }
 .mobileView .pillbutton {
   margin: 1% 25%;
+}
+.tabletView .toggleChild1 img {
+  height: 100%;
+  width: 100%;
 }
 @media (min-width:414px) {
   .mobileView .pillbutton {
